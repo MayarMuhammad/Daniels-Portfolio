@@ -11,3 +11,7 @@ function scrollValue() {
 }
 
 window.addEventListener('scroll', scrollValue);
+
+$(window).on('hashchange', function(e){
+    history.replaceState ("", document.title, e.originalEvent.oldURL);
+});
